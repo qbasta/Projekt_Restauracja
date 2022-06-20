@@ -1,0 +1,88 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<head>
+    <style>
+        .menu {
+            font-size:60px;
+           
+        }
+        a{
+            color:black;
+        }
+        a:hover{
+            color:black;
+        }
+
+        .index {
+        }
+
+        .imgS {
+            max-width: 100%;
+            height: auto;
+        }
+        #rodzic {
+        }
+
+        #dziecko1 {
+            float: left;
+            width: 60%;
+            height: 400px;
+        }
+
+        #dziecko2 {
+            float: left;
+            width: 40%;
+            height: 400px;
+        }
+        #opis{
+            font-size: 20px;
+            font-family:'Segoe UI', Tahoma;
+            font-style:oblique;
+            color: black;
+            text-align: center;       
+            padding: 12px;
+        }
+    </style>
+
+</head>
+
+<img class="imgS" src="~/restauracjaWnetrze.jpg" alt="jpg" />
+
+
+
+
+<p id="opis">
+        Restauracja Zagłoba to wyjątkowe miejsce ulokowane w sercu Kamiennej Góry. Na dwóch stylowo urządzonych piętrach serwujemy szereg klasycznych polskich potraw,
+        które łączą kulinarną wiedzę naszego szefa kuchni ze świeżymi sezonowymi składnikami. W naszym menu znajdą państwo dania na każdą okazję,
+        od specjalnych rocznic po spotkania okolicznościowe lub po prostu wspaniały obiad z rodziną. Dążymy do tego, aby stworzyć atrakcyjne wrażenia smakowe dla każdego z naszych gości.
+</p>
+<div id="rodzic">
+    <div id="dziecko1">
+       <a asp-page="/Meni"class="menu "><strong>__MENU__</strong></a>
+        <p text-algin="center">
+            <em><br /><br />
+                Zapewniamy, że w naszym MENU nie zabraknie niespodziewanych połączeń,
+                regionalnych produktów, SMAKU, ZAPACHU
+                i finezji w podaniu.
+
+                Do zobaczenia!
+            </em>
+        </p>
+    </div>
+    <div id="dziecko2">
+        <img class="imgS" src="~/menu.jpg" alt="jpg" />
+    </div>
+
+</div>
+<strong><i>__Dane Kontaktowe__</i></strong>
+<p>
+    <em>
+        email
+    </em>
+    @Model.Restaurants[0].ContactEmail
+
+</p>
